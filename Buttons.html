@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Data-type</title>
+    <script type="text/javascript">
+        //  document.getElementById("ans").addEventListener("click",Area_of_Rec);
+        
+
+        function Area_of_Rec()  {
+            let len = document.getElementById("sa1").value;
+            let wid = document.getElementById("sa2").value;
+            let area = len*wid;
+            document.getElementById("m1").innerHTML="Area = " +" " + area;
+
+        };
+
+        function Area_of_cir()  {
+            let rad = document.getElementById("sa3").value;
+            const PI = 3.14159;
+            let area = (rad*rad)*PI;
+            let area1 = area.toFixed(2);
+            document.getElementById("m2").innerHTML="Area = " +" " + area1;
+
+        };
+
+        function Area_of_squ()  {
+            let len = document.getElementById("sa5").value;
+            
+            let area = len*len;
+            document.getElementById("m3").innerHTML="Area = " +" " + area;
+
+        };
+
+        function Area_of_tri()  {
+            let len = document.getElementById("sa7").value;
+            let wid = document.getElementById("sa8").value;
+            let breadth = document.getElementById("sa9").value;
+            let area = 0.5*(len*wid*breadth);
+            document.getElementById("m4").innerHTML="Area = " +" " + area;
+
+        };
+
+    </script>
+    <style>
+#ans {
+    height: 20px;
+    width: 100px;
+}
+
+    </style>
+</head>
+
+<body bgcolor="blue" text="white" align="center">
+
+    <span style="font-size:20px;">Length : </span><input type="number" id="sa1"><br><br>
+    <span style="font-size:20px;">Breadth : </span> <input type="number" id="sa2"><br><br>
+
+    <button type="submit" id="ans" value="Area of rectangle" onclick="Area_of_Rec()">SUBMIT</button><br><br>
+    <p id="m1"></p><br>
+
+    <hr color="orange" border="5">
+
+    <span style="font-size:20px;">Radius : </span> <input type="number" id="sa3"><br><br>
+
+    <button type="submit" value="Area of circle" onclick="Area_of_cir()">SUBMIT</button><br> <br>
+    <p id="m2"></p><br>
+
+    <hr color="orange" border="5">
+
+
+    <span style="font-size:20px;">Side:</span> <input type="number" id="sa5"><br><br>
+
+    <button type="submit" value="Area of square" onclick="Area_of_squ()">SUBMIT</button><br> <br>
+    <p id="m3"></p><br>
+
+    <hr color="yellow">
+
+
+    <span style="font-size:20px;">Length : </span> <input type="number" id="sa7"><br><br>
+    <span style="font-size:20px;">Breadth : </span><input type="number" id="sa8"><br><br>
+    <span style="font-size:20px;">height : </span><input type="number" id="sa9"><br><br>
+
+
+    <button type="submit" value="Area of triangle" onclick="Area_of_tri()">SUBMIT</button><br><br>
+    <p id="m4"></p>
+
+
+
+
+</body>
+
+</html>
