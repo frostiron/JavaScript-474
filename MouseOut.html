@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery MouseOut Event</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#second").mouseover(function () {
+                $("#second").text("Hello :)").css("background-color", "grey").css("color","white").css("font-size","2cm").css("width","40%").css("height","5cm");
+            });
+            $("#second").mouseout(function () {
+                $("#second").text("Bye Bye :)").css("background-color", "blue").css("color","yellow").css("font-size","0.7cm").css("height","60px");
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="second" style="background-color: bisque;height:50px;width: 500px;">
+    <p >Move the mouse pointer here !</p>
+</div>
+</body>
+
+</html>

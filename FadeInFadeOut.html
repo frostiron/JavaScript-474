@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Traffic Lights</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#BtnFadeOut").attr("disabled", true);
+
+            $("#BtnFadeIn").click(function () {
+
+                $("#MyDiv1").fadeIn(1000);
+                $("#MyDiv2").fadeIn(2000);
+                $("#MyDiv3").fadeIn(3000);
+                $("#BtnFadeOut").attr("disabled", false);
+                $(this).attr("disabled", true);
+
+            });
+            $("#BtnFadeOut").click(function () {
+
+                $("#MyDiv1").fadeOut(1000);
+                $("#MyDiv2").fadeOut(2000);
+                $("#MyDiv3").fadeOut(3000);
+                $("#BtnFadeIn").attr("disabled", false);
+                $(this).attr("disabled", true);
+
+            });
+            $("#BtnFadeToggle").click(function () {
+
+                $("#MyDiv1").fadeToggle(1000);
+                $("#MyDiv2").fadeToggle(2000);
+                $("#MyDiv3").fadeToggle(3000);
+
+            });
+        });
+    </script>
+
+</head>
+
+<body bgcolor="grey">
+    <center><button id="BtnFadeIn">Click Me For Fade In</button>&nbsp;&nbsp;<button id="BtnFadeOut">Click Me For Fade
+            Out</button>&nbsp;&nbsp;<button id="BtnFadeToggle">Click Me For Fade In / Out Toggle</button><br /><br /><br />
+
+
+        <div id="main"
+            style="height:350px;width:198px;align-items: center;background-color: bisque;padding: 20px;margin: 40px; border-color: black;border-style: solid;border-width: 4px;">
+            <div id="MyDiv1" style="height:100px;width:100px;background-color:Red;display:none;border-radius: 50%;">
+            </div><br />
+            <div id="MyDiv2" style="height:100px;width:100px;background-color:Yellow;display:none;border-radius: 50%;">
+            </div><br />
+            <div id="MyDiv3" style="height:100px;width:100px;background-color:rgb(24, 245, 4);display:none;border-radius: 50%;">
+            </div><br />
+        </div>
+
+
+    </center>
+
+
+</body>
+
+</html>
