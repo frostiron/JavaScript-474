@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Menu - Default functionality</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
+
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        .toggler {
+            width: 500px;
+            height: 350px;
+            position: relative;
+            margin: 15px;
+        }
+
+        #button {
+            padding: .5em 1em;
+            text-decoration: none;
+            margin: 25px;
+        }
+
+        #effect {
+            width: 240px;
+            height: 350px;
+            padding: 0.4em;
+            position: relative;
+            background: #fff;
+        }
+
+        #effect h3 {
+            width: 225px;
+            margin: 0;
+            padding: 0.4em;
+            text-align: center;
+        }
+
+        #toggle1 {
+            margin: 15px;
+
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var state = true;
+            $("#button").on("click", function () {
+                if (state) {
+                    $("#effect").animate({
+                        backgroundColor: "#09dceb",
+                        color: "#026305",
+                        width: 500
+                    }, 1000);
+                } else {
+                    $("#effect").animate({
+                        backgroundColor: "#fff",
+                        color: "#000",
+                        width: 240
+                    }, 1000);
+                }
+                state = !state;
+            });
+        });
+
+        $(function () {
+            var state = true;
+            $("#button").on("click", function () {
+                if (state) {
+                    $("#header").animate({
+                        backgroundColor: "#aa0000",
+                        color: "#f59fdd",
+                        width: 485
+                    }, 1000);
+                } else {
+                    $("#header").animate({
+                        backgroundColor: "#fff",
+                        color: "#000",
+                        width: 225
+                    }, 1000);
+                }
+                state = !state;
+            });
+        });
+    </script>
+</head>
+
+<body bgcolor="antiquewhite">
+
+    <div id="navb">
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Choose One from Below</span>
+            </div>
+        </nav>
+    </div>
+    <div id="toggle1">
+        <ul id="menu">
+            <li class="ui-state-disabled">
+                <div>Toys (n/a)</div>
+            </li>
+            <li>
+                <div>Books</div>
+            </li>
+            <li>
+                <div>Clothing</div>
+            </li>
+            <li>
+                <div>Electronics</div>
+                <ul>
+                    <li class="ui-state-disabled">
+                        <div>Home Entertainment</div>
+                    </li>
+                    <li>
+                        <div>Woofer Speakers</div>
+                    </li>
+                    <li>
+                        <div>Utilities</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Movies</div>
+            </li>
+            <li>
+                <div>Music</div>
+                <ul>
+                    <li>
+                        <div>Rock</div>
+                        <ul>
+                            <li>
+                                <div>Alternative</div>
+                            </li>
+                            <li>
+                                <div>Classic</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Jazz</div>
+                        <ul>
+                            <li>
+                                <div>Freejazz</div>
+                            </li>
+                            <li>
+                                <div>Big Band</div>
+                            </li>
+                            <li>
+                                <div>Modern</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Pop</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-state-disabled">
+                <div>Specials (n/a)</div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ANimation -->
+
+    <div class="toggler">
+        <div id="effect" class="ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all" id="header">Animate</h3>
+            <p>
+                <h4>This below is animated text. You can customize it using JQuery.</h4>
+                Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing
+                ut, luctus sed, hendrerit vitae, mi.
+            </p>
+        </div>
+    </div>
+
+    <button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
+
+</body>
+
+</html>
